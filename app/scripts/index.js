@@ -14,24 +14,24 @@ fetchJSONP(url, function(data){
         title = item.title,
         shopName = item.Shop.shop_name,
         category = item.category_path,
+        pictureURL = item.Images[0].url_fullxfull,
         newObject = {
           'price':price,
           'title':title,
           'shop_name':shopName,
-          'category':category
+          'category':category,
+          'pictureURL':pictureURL
         };
+        // console.log('PictureURL = ' + pictureURL);
     newObjectsArray.push(newObject);
   });
 
+  console.log(resultsArray);
+
   newObjectsArray.forEach(function(item){
     var newTile = stamp(item);
-    console.log(newTile);
     $('#tile-container').append(newTile);
   });
-
-  // newObjectsArray.forEach(function(item){
-  //
-  // });
 });
 
 
