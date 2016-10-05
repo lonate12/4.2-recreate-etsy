@@ -5,6 +5,18 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 // Import Bootstrap
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
+// Colors
+$icon-grey: #666666;
+// $icon-hover: ;
+$link-blue: #0191C3;
+$bg-offwhite: #FBFBFA;
+$white: #FFF;
+$search-blue: #34A8C4;
+$search-border: #2F98B1;
+$price-green: #84C042;
+$maker-grey: #9A9A9A;
+$title-black: #444444;
+
 
 *,
 *::before,
@@ -14,4 +26,38 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 
 img {
   max-width: 100%;
+}
+
+header {
+  font-size: 22px;
+  position: relative;
+  color: $icon-grey;
+  border-bottom: 1px solid #DEDEDE;
+  padding-bottom: 4px;
+
+  #etsy-logo {
+    height: 44px;
+    width: 72px;
+  }
+
+  a {
+    font-size: 14px;
+
+    :nth-last-child(1) {
+      font-size: 22px;
+      color: $icon-grey;
+    }
+  }
+
+  #sign-in {
+    border: 1px solid $link-blue;
+    padding: 8px;
+    border-radius: 3px;
+  }
+
+  .navigation {
+    position: absolute;
+    right: 4px;
+    top: 5px;
+  }
 }

@@ -5,22 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>Recreate Etsy</title>
     <link rel="stylesheet" href="css/app.css">
+    <script src="https://use.fontawesome.com/536de10d84.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="row" id="album-container">
+    <div class="container-fluid">
+      <header class="row">
+        <img src="images/Etsy-logo.png" alt="Etsy Logo" id="etsy-logo">
+        <i class="fa fa-search"></i>
+        <ul class="list-inline navigation">
+          <li><a href="#">Sell</a></li>
+          <li><a href="#" id="sign-in">Sign In</a></li>
+          <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+        </ul>
+      </header>
+      <div class="row body">
+        <div class="col-sm-3 side-bar">
 
+        </div>
+        <div class="col-xs-12 col-sm-9 tile-container">
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  <script id="tile-template" type="text/x-handlebars-template">
+    <div class="col-xs-6 col-md-4 col-lg-3">
+      <img src="http://unsplash.it/200/200" alt="">
+      <div class="tile-info">
+        <p class="title">{{title}}</p>
+        <span class="shop-name">{{shop_name}}</span><span class="price">$ {{price}}</span>
       </div>
     </div>
-
-
-    <script id="photo-album" type="text/x-handlebars-template">
-      <div class="col-md-6">
-        <h2>{{title}}</h2>
-        <img src="http://unsplash.it/200/200" alt="">
-      </div>
-    </script>
-
-    <script src="js/bundle.js"></script>
+  </script>
+  <script src="js/bundle.js"></script>
   </body>
 </html>
