@@ -8,19 +8,30 @@ var url = "https://api.etsy.com/v2/listings/active.js?api_key=cdwxq4soa7q4zuavbt
 fetchJSONP(url, function(data){
   var resultsArray = data.results;
   var newObjectsArray = [];
+
   resultsArray.forEach(function(item){
-    var price = item.price;
-    var title = item.title;
-    var shopName = item.Shop.shop_name;
-    var newObject = {
-      'price':price,
-      'title':title,
-      'shop_name':shopName
-    };
+    var price = item.price,
+        title = item.title,
+        shopName = item.Shop.shop_name,
+        category = item.category_path,
+        newObject = {
+          'price':price,
+          'title':title,
+          'shop_name':shopName,
+          'category':category
+        };
     newObjectsArray.push(newObject);
   });
-  console.log(resultsArray);
-  console.log(newObjectsArray);
+
+  newObjectsArray.forEach(function(item){
+    var newTile = stamp(item);
+    console.log(newTile);
+    $('#tile-container').append(newTile);
+  });
+
+  // newObjectsArray.forEach(function(item){
+  //
+  // });
 });
 
 
