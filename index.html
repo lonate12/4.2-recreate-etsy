@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Recreate Etsy</title>
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://use.fontawesome.com/536de10d84.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header class="row">
+        <img src="images/Etsy-logo.png" alt="Etsy Logo" id="etsy-logo">
+        <div class="search-bar-container">
+          <input type="text" class="search-bar" value="" placeholder="Search for items or shops">
+          <button class="search-button" value="Search">Search</button>
+        </div>
+        <i class="fa fa-search"></i>
+        <ul class="list-inline navigation">
+          <li><a href="#">Sell</a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#" id="sign-in">Sign In</a></li>
+          <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+        </ul>
+      </header>
+      <div class="row sub-navigation-container">
+        <ul class="list-inline sub-navigation">
+          <li><a href="#">Clothing &amp; Accesories</a></li>
+          <li><a href="#">Jewelry</a></li>
+          <li><a href="#">Craft Supplies &amp; Tools</a></li>
+          <li><a href="#">Wedding</a></li>
+          <li><a href="#">Entertainment</a></li>
+          <li><a href="#">Home &amp; Living</a></li>
+          <li><a href="#">Kids &amp; Baby</a></li>
+          <li><a href="#">Vintage</a></li>
+        </ul>
+      </div>
+      <div class="row body">
+        <div class="col-sm-3 side-bar-container">
+          <div class="col-xs-12 side-bar-container">
+            <h3 class="heading">Show results for:</h3>
+            <ul class="side-bar-ul col-xs-12">
+              <li><a href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i>All Categories</a></li>
+              <li><a href="#">Accessories</a></li>
+              <li><a href="">placeholder</a></li>
+              <li><a href="">placeholder</a></li>
+              <li><a href="">placeholder</a></li>
+              <li><a href="">placeholder</a></li>
+              <li><a href="">placeholder</a></li>
+              <li><a href="">placeholder</a></li>
+              <li><a href="">placeholder</a></li>
+              <li><a href="">placeholder</a></li>
+              <li><a href="">placeholder</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-9" id="tile-container">
+          <div class="col-sm-9">
+            <p class="bread-crumbs"><a href="#">All categories</a>&gt;<a href="#">Accessories</a>&gt;"star wars" (15,196 results)</p>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  <script id="tile-template" type="text/x-handlebars-template">
+    <div class="col-xs-6 col-md-4 col-lg-3 tile">
+      <div class="image-container">
+        <img src={{pictureURL}} alt="{{title}}" class="tile-image img-responsive">
+      </div>
+      <div class="tile-info">
+        <p class="title">{{title}}</p>
+        <span class="shop-name">{{shop_name}}</span><span class="price">${{price}}</span>
+      </div>
+    </div>
+  </script>
+  <script src="js/bundle.js"></script>
+  </body>
+</html>
